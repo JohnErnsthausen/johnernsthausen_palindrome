@@ -5,7 +5,19 @@ class JohnernsthausenPalindromeTest < Minitest::Test
     refute_nil ::JohnernsthausenPalindrome::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_non_palindrome
+    refute "Apple".palindrome?
+  end
+
+  def test_Case_Insensitive_palindrome
+    assert "RaceCar".palindrome?
+  end
+
+  def test_palindrome_with_punctuation
+    assert "Madam, I'm Adam".palindrome?
+  end
+
+  def test_palindrome_with_numbers
+    refute 123.palindrome?
   end
 end
