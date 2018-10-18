@@ -18,6 +18,6 @@ class String
   include JohnernsthausenPalindrome
 end
 
-class Fixnum
+class Integer
   include JohnernsthausenPalindrome
 end
