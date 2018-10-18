@@ -20,4 +20,8 @@ class JohnernsthausenPalindromeTest < Minitest::Test
   def test_palindrome_with_numbers
     refute 123.palindrome?
   end
+
+  def test_palindrome_with_whitespace
+    refute "    ".palindrome?
+  end
 end
